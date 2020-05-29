@@ -5,4 +5,5 @@ type User {
     avatar: String
     created_at: DateTime!
     updated_at: DateTime!
+    password: String! @middleware(checks:["auth:api"])
 }
