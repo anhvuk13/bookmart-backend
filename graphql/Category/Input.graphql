@@ -1,0 +1,12 @@
+input AddCategoryBelongsToMany {
+  create: [CreateCategoryInput!]
+  upsert: [UpsertCategoryInput!]
+}
+
+input CreateCategoryInput {
+  id: ID!
+}
+
+input UpsertCategoryInput {
+  id: ID!
+}

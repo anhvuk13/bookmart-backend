@@ -1,0 +1,3 @@
+extend type Mutation {
+  addBook(input: AddBookInput! @spread): Book @create
+}
