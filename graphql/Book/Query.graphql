@@ -1,0 +1,4 @@
+extend type Query {
+    books: [Book] @all
+    book(id: ID @eq): Book @find
+}

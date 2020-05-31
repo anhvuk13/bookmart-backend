@@ -8,6 +8,6 @@ class Category extends Model
 {
   protected $guarded = [];
   public function books() {
-    return $this->belongsToMany(Book::class, 'books_categories')->withPivot('rating');
+    return $this->belongsToMany(Book::class);
   }
 }

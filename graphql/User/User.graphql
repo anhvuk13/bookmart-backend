@@ -6,4 +6,6 @@ type User {
     created_at: DateTime!
     updated_at: DateTime!
     password: String! @middleware(checks:["auth:api"])
+    books: [Book] @belongsToMany
+    pivot: BookUserPivot
 }

@@ -7,35 +7,8 @@ scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date
 "A datetime and timezone string in ISO 8601 format `Y-m-dTH:i:sO`, e.g. `2020-04-20T13:53:12+02:00`."
 scalar DateTimeTz @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTimeTz")
 
-type Query {
-    books: [Book] @all
-    book(id: ID @eq): Book @find
-    categories: [Category] @all
-    category(id: ID @eq): Category @find
-}
+type Query
 
 type Mutation
 
-#import user/*.graphql
-
-
-type Book {
-  id: ID!
-  title: String!
-  author: String!
-  image: String
-  link: String
-  categories: [Category] @belongsToMany
-  pivot: BookCategoryPivot
-}
-
-type Category {
-  id: ID!
-  name: String!
-  books: [Book] @belongsToMany
-  pivot: BookCategoryPivot
-}
-
-type BookCategoryPivot {
-  rating: Int
-}
+#import */*.graphql

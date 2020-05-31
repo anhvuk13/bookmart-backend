@@ -1,0 +1,10 @@
+type Book {
+    id: ID!
+    title: String!
+    author: String!
+    image: String
+    link: String
+    categories: [Category] @belongsToMany
+    users: [User] @belongsToMany
+    pivot: BookUserPivot
+}

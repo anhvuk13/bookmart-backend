@@ -1,0 +1,12 @@
+type BookUserPivot {
+  users: [User] @belongsTo
+  books: [Book] @belongsTo
+  book_id: Int 
+  user_id: Int
+  rating: Int
+  review: String
+}
+
+extend type Query {
+  book_user: BookUserPivot @all
+}

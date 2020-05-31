@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBooksCategoriesTable extends Migration
+class CreateBookCategoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateBooksCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('books_categories', function (Blueprint $table) {
+        Schema::create('book_category', function (Blueprint $table) {
             $table->primary(['book_id', 'category_id']);
-            $table->integer('book_id')->unsigned();
-            $table->integer('category_id')->unsigned();
-            $table->integer('rating');
+            $table->bigInteger('book_id')->unsigned();
+            $table->bigInteger('category_id')->unsigned();
+            $table->foreign('book_id')->references('id')->on('books');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
