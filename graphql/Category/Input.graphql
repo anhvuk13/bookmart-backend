@@ -4,9 +4,10 @@ input AddCategoryBelongsToMany {
 }
 
 input CreateCategoryInput {
-  id: ID!
+  name: String!
 }
 
 input UpsertCategoryInput {
   id: ID!
+  name: String!
 }

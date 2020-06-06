@@ -1,5 +1,5 @@
 extend type Mutation {
- createUser(
+    createUser(
         name: String! @rules(apply: ["required", "min:4"]),
         email: String! @rules(apply: ["email", "unique:users"]),
         password: String! @rules(apply: ["min:4"]) @hash

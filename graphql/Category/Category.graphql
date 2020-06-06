@@ -1,4 +1,5 @@
 type Category {
     id: ID!
+    name: String!
     books: [Book] @belongsToMany
 }

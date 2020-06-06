@@ -6,7 +6,3 @@ type BookUserPivot {
   rating: Int
   review: String
 }
-
-extend type Query {
-  book_user: BookUserPivot @all
-}

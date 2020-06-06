@@ -1,0 +1,18 @@
+extend type Mutation {
+  updateReview(input: UpdateReviewInput! @spread): User @update
+}
+
+input UpdateReviewInput {
+  id: ID!
+  books: UpdateUserReviews
+}
+
+input UpdateUserReviews {
+  connect: [ConnectUserReview!]
+}
+
+input ConnectUserReview {
+  id: ID!
+  review: String
+  rating: Int
+}
