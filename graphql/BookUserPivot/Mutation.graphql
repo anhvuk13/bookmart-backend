@@ -8,7 +8,7 @@ input UpdateReviewInput {
 }
 
 input UpdateUserReviews {
-  connect: [ConnectUserReview!]
+  sync: [ConnectUserReview!]
 }
 
 input ConnectUserReview {
