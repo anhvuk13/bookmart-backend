@@ -1,8 +1,9 @@
 type BookUserPivot {
   users: [User] @belongsTo
   books: [Book] @belongsTo
-  book_id: Int 
+  book_id: Int
   user_id: Int
   rating: Int
   review: String
+  owned: Boolean
 }

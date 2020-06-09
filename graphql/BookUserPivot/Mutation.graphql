@@ -8,11 +8,13 @@ input UpdateReviewInput {
 }
 
 input UpdateUserReviews {
-  sync: [ConnectUserReview!]
+  syncWithoutDetaching: [ConnectUserReview!]
+  connect: [ConnectUserReview!]
 }
 
 input ConnectUserReview {
   id: ID!
+  owned: Boolean
   review: String
   rating: Int
 }
