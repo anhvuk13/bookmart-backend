@@ -1,4 +1,5 @@
 extend type Query {
     books: [Book] @all
+    filterBookByCategory(id: [Int!]): [Book]
     book(id: ID @eq): Book @find
 }

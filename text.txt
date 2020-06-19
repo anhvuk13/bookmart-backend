@@ -1,0 +1,7 @@
+Encryption keys already exist. Use the --force option to overwrite them.
+Personal access client created successfully.
+Client ID: 3
+Client secret: dePqm6El8zU3qSbfjm3mtUTNLHElxJuP7q6ycp4W
+Password grant client created successfully.
+Client ID: 4
+Client secret: bi6vzFPcmHYerf5ddpEklTZDEyWz2WLpcd6dwphu

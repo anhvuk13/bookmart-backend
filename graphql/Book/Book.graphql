@@ -5,6 +5,7 @@ type Book {
     image: String
     link: String
     categories: [Category] @belongsToMany
+    categoriesArray: [Category]
     users: [User] @belongsToMany
     pivot: BookUserPivot
 }

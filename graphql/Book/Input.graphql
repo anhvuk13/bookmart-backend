@@ -1,5 +1,5 @@
 input AddBookInput {
-  title: String,
-  author: String,
-  categories: AddCategoryBelongsToMany
+    name: String
+    author: String
+    categories: AddCategoryBelongsToMany
 }

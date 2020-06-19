@@ -1,5 +1,6 @@
 extend type Query {
     categories: [Category] @all
     category(id: ID @eq): Category @find
+    categoriesByIds(ids: [Int!] @in(key: "id")): [Category] @all
     categoryCount: Int! @count(model: "Category")
 }
