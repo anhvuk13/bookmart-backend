@@ -1,5 +1,6 @@
 <?php
 
+use App\Category;
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
@@ -11,11 +12,28 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->insert([
-            'name' => 'Lam vuon',
+        Category::create([
+            'name' => 'Marketing'
         ]);
-        DB::table('categories')->insert([
-            'name' => 'Lam giau',
+
+        Category::create([
+            'name' => 'Business'
+        ]);
+
+        Category::create([
+            'name' => 'Finance'
+        ]);
+
+        Category::create([
+            'name' => 'Entrepreneurship'
+        ]);
+
+        Category::create([
+            'name' => 'Science'
+        ]);
+
+        Category::create([
+            'name' => 'Biography'
         ]);
     }
 }
