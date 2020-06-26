@@ -1,5 +1,6 @@
 input AddBookInput {
     name: String
     author: String
+    image: String
     categories: AddCategoryBelongsToMany
 }
