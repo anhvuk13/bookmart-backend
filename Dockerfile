@@ -23,6 +23,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install extensions
 RUN docker-php-ext-install pdo_mysql zip exif pcntl gd
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Add user for laravel application
 #RUN groupadd -g 1000 www

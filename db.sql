@@ -7,6 +7,14 @@
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
+DROP DATABASE IF EXISTS bookmart;
+CREATE DATABASE bookmart;
+USE bookmart;
+
+
+SET GLOBAL innodb_large_prefix=1;
+SET GLOBAL innodb_file_per_table=1;
+SET GLOBAL innodb_file_format=Barracuda;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -461,6 +469,7 @@ ALTER TABLE `oauth_refresh_tokens`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
+  ROW_FORMAT=DYNAMIC,
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
