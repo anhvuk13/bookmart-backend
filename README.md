@@ -4,8 +4,10 @@ The server of a simple community based web app for reviewing & bookmarking, whic
 
 ## Demo
 
-- Web: https://bookmart.duckdns.org (Thanks to [violeine](https://github.com/violeine))
-- GraphQL Playground: https://be.bookmart.duckdns.org/graphql-playground (Powered by [mll-lab](https://github.com/mll-lab/laravel-graphql-playground))
+- Web: http://bookmart.byethost7.com (Thanks to [Byet Host](https://byet.host))
+- Server: https://bookmart-backend.herokuapp.com (Hosted by [Heroku](https://heroku.com))
+- Head to [GraphQLBin](https://www.graphqlbin.com/v2/new) and insert https://bookmart-backend.herokuapp.com/graphql as endpoint to play with GraphQL
+- View [INFO.md](https://github.com/anhvuk13/bookmart-backend/tree/report/INFO.md) for accounts to login
 
 ## Ref.
 
